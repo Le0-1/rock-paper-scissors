@@ -8,14 +8,15 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
+    flex: 1 1 auto;
     background-color: rgb(0, 0, 0);
-    margin: 0;
+    margin: auto;
 }
 
-.header-icon img {
+img {
     max-width: 100%;
     max-height: 100%;
+    flex-shrink: 1;
 }
 
 .header-icon {
@@ -47,33 +48,68 @@ a {
 
 .options-wrapper {
     display: flex;
-    margin: auto;
     gap: 60px;
-    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
     width: 440px;
-    align-content: center;
     flex: 1 1 auto;
 }
 
-.options-wrapper .option img {
-    max-width: 100%;
-    max-height: 100%;
-}
-.options-wrapper::before {
-    height: 4px;
-    content: '';
-    background-color: black;
-    width: 600px;
-    margin: 0 auto;
-    flex: 0 1 1;
-}
 .options-wrapper .option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     border-style: none;
     background-color: white;
+}
+
+/* hr */
+.after-choice { 
+    display: flex;
+    flex: 1;
+    margin: 20px auto;
+    width: 600px;
+    height: 2px;
+    border-style: solid;
+    background-color: rgb(0, 0, 0);
+    border-radius: 12px;
+}
+
+.result {
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    justify-content: space-between;
+    width: 600px;
+    gap: 80px;
+}
+
+/* tamanho da imagem */
+.result .computer,
+.result .human  {
+    width: 80px;
+    height: 80px;
+    flex: 0 1 auto;
+}
+
+.result hr {
+    width: 4px;
+    height: auto;
+    border-radius: 12px;
+    border-style: solid black;
+    background-color: black;
+}
+
+.result p {
+    font-size: 40px;
+}
+
+.score {
+    font-size: 50px;
+    justify-self: center;
+    align-self: center;
+    flex: 0 1 auto;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
